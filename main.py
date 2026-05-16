@@ -68,17 +68,29 @@ def listar_produtos_codigo():
             f"Categoria: {produto['catg']}\nPreço: {produto['preco']}\n"
             f"Quantidade: {produto['qtd']}")
 
+def listar_produtos_categoria():
+    categoria = input("Digite a categoria do produto: ")
+    encontrou = False
+    for produto in produtos:
+        if produto['catg'] == categoria:
+            encontrou = True
+            print(f"Código: {produto['codigo']}\nNome: {produto['nome']}\n"
+                f"Categoria: {produto['catg']}\nPreço: {produto['preco']}\n"
+                f"Quantidade: {produto['qtd']}")
+
+    if not encontrou:
+        print("Nenhum produto encontrado na categoria especificada")
 
 while True:
 
     print("---------- MENU ---------")
-    print("1 - Cadastrar Produto")
+    print("1 - Cadastrar Produto") #feito
     print("2 - Editar produto")
     print("3 - Remover produto")
-    print("4 - Buscar produto por código")
-    print("5 - Buscar produto por nome")
+    print("4 - Buscar produto por código")#feito
+    print("5 - Buscar produto por nome")#feito
     print("6 - Registrar venda (reduz estoque, valida quantidade)") 
-    print("7 - Listar produtos por código")
+    print("7 - Listar produtos por código")#feito
     print("8 - Listar produtos por categoria")
     print("9 - Relatório de estoque baixo (quantidade < limite configurável)")
     print("10 - Salvar e carregar dados em arquivo (CSV ou JSON)")
@@ -89,7 +101,6 @@ while True:
     match menu:
         case 1: 
             cadastrar_produto()
-            print("cadastrar()")
         case 2:
             print("cadastrar()")
         case 3:
@@ -100,8 +111,13 @@ while True:
             buscar_nome()
         case 6:
             listar_produtos_codigo()
-            print("cadastrar()")
         case 7:
+            listar_produtos_categoria()
+        case 8:
+            print("cadastrar()")
+        case 9:
+            print("cadastrar()")
+        case 10:
             print("cadastrar()")
         case 0:
             print("Saindo")
