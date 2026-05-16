@@ -91,7 +91,7 @@ while True:
     print("5 - Buscar produto por nome")#feito
     print("6 - Registrar venda (reduz estoque, valida quantidade)") 
     print("7 - Listar produtos por código")#feito
-    print("8 - Listar produtos por categoria")
+    print("8 - Listar produtos por categoria")#feito
     print("9 - Relatório de estoque baixo (quantidade < limite configurável)")
     print("10 - Salvar e carregar dados em arquivo (CSV ou JSON)")
     print("0 - Sair")
